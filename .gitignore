@@ -1,0 +1,7 @@
+.env
+
+# Vendor
+vendor/
+
+# IDE config
+.vscode/
