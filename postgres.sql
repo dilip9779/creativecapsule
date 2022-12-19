@@ -19,12 +19,12 @@ CREATE TABLE IF NOT EXISTS public."user"
 
 CREATE TABLE IF NOT EXISTS public.transaction
 (
-    id bigserial NOT NULL PRIMARY KEY (id),
+    id bigserial PRIMARY KEY NOT NULL,
     transaction_amount double precision NOT NULL,
     user_id integer NOT NULL,
     scratch_card_id integer NOT NULL,
     date_of_transaction timestamp with time zone NOT NULL DEFAULT now(),
-    CONSTRAINT transaction_user_id_scratch_card_id_key UNIQUE (user_id, scratch_card_id),
+    UNIQUE (user_id, scratch_card_id),
     CONSTRAINT transaction_scratch_card_id_fkey FOREIGN KEY (scratch_card_id)
         REFERENCES public.scratch_card (id) MATCH SIMPLE
         ON UPDATE NO ACTION
