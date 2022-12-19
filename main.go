@@ -35,12 +35,12 @@ func run() error {
 		AppHost               string `conf:"default:localhost"`
 		AppProtocol           string `conf:"default:http"`
 		PDB                   struct {
-			Uri      string `conf:""`
-			User     string `conf:"default:creativecapsule"`
-			Password string `conf:"default:creativecapsule,noprint"`
-			Host     string `conf:"default:localhost"`
+			Uri      string `conf:"default:postgres://wqvfrpxq:PY5dxk2K7CzjMH9_EQv-xi71Yl4XHrt8@chunee.db.elephantsql.com/wqvfrpxq"`
+			User     string `conf:"default:wqvfrpxq"`
+			Password string `conf:"default:PY5dxk2K7CzjMH9_EQv-xi71Yl4XHrt8,noprint"`
+			Host     string `conf:"default:chunee.db.elephantsql.com"`
 			Port     string `conf:"default:5432"`
-			Name     string `conf:"default:creativecapsuledb"`
+			Name     string `conf:"default:wms"`
 			SslMode  string `conf:"default:disable"`
 		}
 		LogLevel string `conf:"default:trace"`
